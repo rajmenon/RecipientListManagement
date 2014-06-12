@@ -27,6 +27,7 @@ namespace RecipientListManagement.RecipientsLists
             public string UserName { get; set; }
             public string StateName { get; set; }
             public string Key { get; set; }
+            public UserProfile Profile { get; set; }
             public int NumberOfClicks { get; set; }
 
         }
@@ -78,7 +79,8 @@ namespace RecipientListManagement.RecipientsLists
                             {
                                 Email = contact.Profile.Email,
                                 FullName = contact.Profile.FullName,
-                                Key = rowId
+                                Key = rowId,
+                                Profile = contact.Profile
                             };
                             userlist.Add(item);
                         }
